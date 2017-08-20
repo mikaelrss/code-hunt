@@ -9,16 +9,20 @@ body {
     color: $ch-maintext;
 }
 
+a,
 button,
 input {
     border: none;
     outline: none;
+    line-height: 1em;
     height: 75px;
     padding-right: 25px;
     padding-left: 25px;
     box-sizing: border-box;
     font-size: 25px;
-    margin: $least-margin;
+    margin-top: $least-margin;
+    margin-bottom: $least-margin;
+    text-decoration: none;
 }
 
 // * {

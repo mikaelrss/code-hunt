@@ -1,14 +1,76 @@
 .button {
-    // background-color: $ch-button;
     background-color: $ch-background;
     color: #fff;
-    border: 4px solid $ch-button;
-    transition: 150ms all;
+    height:75px;
+
+}
+
+.button,
+.button-anchor {
+    background: none;
+    border: 0;
+    box-sizing: border-box; 
+    height: 75px;
+    line-height: 75px;
+    
+    box-shadow: inset 0 0 0 4px $ch-button-opaque-border;
+    font-size: inherit;
+    font-weight: 700;
+
+    position: relative;
+    vertical-align: middle;
+
+    &::before,
+    &::after {
+        box-sizing: inherit;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    &::before,
+    &::after {
+        border: 4px solid transparent;
+        width: 0;
+        height: 0;
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+    }
 
     &:hover {
-        width: 100%;
-        border: 8px solid $ch-button;
         background-color: $ch-button-opaque;
+    }
+
+    &::after {
+        bottom: 0;
+        right: 0;
+    }
+
+    &:hover::before,
+    &:hover::after {
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover::before {
+        border-top-color: $ch-button; 
+        border-right-color: $ch-button;
+        transition:
+        width 0.25s ease-out, 
+        height 0.25s ease-out 0.25s;
+    }
+
+    &:hover::after {
+        border-bottom-color:$ch-button; 
+        border-left-color: $ch-button;
+        transition:
+        border-color 0s ease-out 0.5s, 
+        width 0.25s ease-out 0.5s, 
+        height 0.25s ease-out 0.75s; 
     }
 }
 

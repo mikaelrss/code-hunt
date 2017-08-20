@@ -1,13 +1,13 @@
 import React from 'react';
 
 const Field = props => {
-    const { success, failure } = props;
+    const { success, failure, inputValue, changeHandler, disabled } = props;
     let className = "input "
-    success ? className += 'input--success' : '';
-    failure ? className += 'input--failure' : '';
+    success ? className = 'input input--success' : '';
+    failure ? className = 'input input--failure' : '';
 
     return (
-        <input className={className}  /> 
+        <input className={className} value={inputValue} onChange={changeHandler}  disabled={disabled}/> 
     );  
 };
 
