@@ -1,0 +1,29 @@
+.button {
+    // background-color: $ch-button;
+    background-color: $ch-background;
+    color: #fff;
+    border: 4px solid $ch-button;
+    transition: 150ms all;
+
+    &:hover {
+        width: 100%;
+        border: 8px solid $ch-button;
+        background-color: $ch-button-opaque;
+    }
+}
+
+.input {
+    width: 300px;
+    color: $ch-button;
+
+    &--failure {
+        color: $ch-failure-text;
+        border: 4px solid $ch-failure-text;
+    }
+    &--success {
+        width: 50%;
+        color: $ch-success-text;
+        border: 4px solid $ch-success-text;
+    }
+}
+

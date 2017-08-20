@@ -1,0 +1,11 @@
+.ch-response {
+    color: purple;
+    
+    &--success {
+        color: $ch-success-text;
+    }
+
+    &--failure {
+        color: $ch-failure-text;
+    }
+}

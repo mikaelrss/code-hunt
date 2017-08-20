@@ -1,0 +1,26 @@
+* {
+    font-family: 'Lato', sans-serif;
+    color: $ch-maintext;
+    font-size: 20px
+}
+
+body {
+    background-color: $ch-background;
+    color: $ch-maintext;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+    height: 75px;
+    padding-right: 25px;
+    padding-left: 25px;
+    box-sizing: border-box;
+    font-size: 25px;
+    margin: $least-margin;
+}
+
+// * {
+//     background-color: rgba(100,0,0,0.1);
+// }
