@@ -54,11 +54,11 @@ app.post('/api/puzzle/three', (req, res) => {
       }
   }, generateServerDelay());
 });
-
-app.listen(7771, 'localhost', function(err) {
+var port = process.env.PORT || 3001;
+app.listen(port, function(err) {
     if (err) {
         console.log(err);
         return;
     }
-    console.log('Listening at http://localhost:7771');
+    console.log('Listening at http://localhost:');
 });
