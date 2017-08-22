@@ -10,7 +10,7 @@
     "build": "webpack --progress --colors --config ./webpack.prod.config.js",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "npm run build"
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
