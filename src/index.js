@@ -18,4 +18,8 @@ ReactDOM.render(
     document.getElementById('app')
 );
 
-module.hot.accept();
+const development = process.env.NODE_ENV === 'development';
+
+if (development) {
+    module.hot.accept();
+}
