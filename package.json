@@ -8,7 +8,8 @@
     "start": "nodemon lib/server.js --exec babel-node ",
     "build": "babel lib -d dist && webpack --config webpack.config.js",
     "serve": "node dist/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
