@@ -11,22 +11,10 @@ app.get('/', (req, res) => {
 });
 app.use(express.static(__dirname + '/dist'));
 
-function generateServerDelay(){
-    return Math.floor(Math.random() * 300) + 50;
-}
 
 // ProfileInfo
 app.post('/api/puzzle/one', (req, res) => {
-  setTimeout(() => {
-      if(req.body.code === 'one'){
-          res.status(200).send({ message: "You solved puzzle 1!", solution: "http://tw.ocodeh.unt"});
-      }else if (req.body.code === 'xy') {
-          res.status(500).send({ message: "You are getting closer"});
-      }
-      else{
-        res.status(500).send({ message: "Wrong answer"});
-      }
-  }, generateServerDelay());
+    res.status(200).send({ message: "You solved puzzle 1!", solution: "http://tw.ocodeh.unt"});
 });
 
 app.post('/api/puzzle/two', (req, res) => {
