@@ -52,7 +52,7 @@ class Keyboard extends Component {
         console.log(qwertyDvorakDictionary[value] || value);
         var evt = document.createEvent("CustomEvent");
 
-        if (value === "K" || value === "E" || value === "Y") {
+        if (value === "K" || value === "C" || value === "O" || value === "L" || value === "N" || value === "U") {
             evt.initCustomEvent("correctKey", true, true, {correctButton: value});
             document.dispatchEvent(evt)
         }else {

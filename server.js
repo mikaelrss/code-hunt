@@ -17,7 +17,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const development = process.env.NODE_ENV === 'development';
 
-console.log(development)
+function generateServerDelay() {
+    return Math.floor(Math.random() * 800) + 500
+}
+
 if (development){
     app.use(function(req, res, next) {
         res.header("Access-Control-Allow-Origin", "*");
@@ -26,17 +29,18 @@ if (development){
     });
 }
 
-// ProfileInfo
 app.post('/api/puzzle/one', (req, res) => {
-    console.log(req.body)
-    if(req.body.code === 'GBNRJT'){
-        res.status(200).send({ message: "You solved puzzle 1!", solution: "http://tw.ocodeh.unt"});
-    }else if (req.body.code === 'xy') {
-        res.status(500).send({ message: "You are getting closer"});
-    }
-    else{
-      res.status(500).send({ message: "Wrong answer"});
-    }
+    setTimeout(function() {
+        var input = req.body.code || '';
+        if(input.toUpperCase() === 'GBNRJT'){
+            res.status(200).send({ message: "You solved puzzle 1!", solution: "http://tw.ocodeh.unt"});
+        }else if (input.toUpperCase() === 'UNLOCK') {
+            res.status(500).send({ message: "You are getting closer"});
+        }
+        else{
+          res.status(500).send({ message: "Wrong answer"});
+        }
+    }, generateServerDelay())
 });
 
 app.post('/api/puzzle/two', (req, res) => {
