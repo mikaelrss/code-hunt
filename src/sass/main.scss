@@ -8,9 +8,14 @@ $least-margin: 10px;
 
 // Imports
 @import '../containers/wrapper/wrapper';
-@import '../components/answer/answer';
+
+@import '../container_components/answer/answer';
+@import '../container_components/keyboard/keyboard';
+
+
 @import '../components/loader/loader';
 @import '../components/response/response';
+
 @import '../puzzles/puzzle';
 @import './framework';
 @import './components';

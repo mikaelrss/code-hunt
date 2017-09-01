@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import * as selectors from '../selectors'
 
-import Answer from '../components/answer/Answer';
+import Answer from '../container_components/answer/Answer';
 
 class PuzzleTwo extends Component {
     constructor(props) {

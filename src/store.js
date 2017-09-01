@@ -6,6 +6,8 @@ import rootReducer from './reducers';
 /* eslint-disable no-underscore-dangle */
 
 const development = process.env.NODE_ENV === 'development';
+console.log(development)
+
 const enhancers = compose(
     window.devToolsExtension ? window.devToolsExtension() : f => f
 );

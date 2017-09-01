@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 
 import * as selectors from '../../selectors'
 
-import Field from '../field/Field';
-import Button from '../button/Button';
-import Loader from '../loader/Loader';
-import Response from '../response/Response';
+import Field from '../../components/field/Field';
+import Button from '../../components/button/Button';
+import Loader from '../../components/loader/Loader';
+import Response from '../../components/response/Response';
 
 import { submitPuzzle, stopLoading, startLoading, answerFailed, answerSucceeded, changeValue, nextPuzzle} from '../../actions/actions_container';
 

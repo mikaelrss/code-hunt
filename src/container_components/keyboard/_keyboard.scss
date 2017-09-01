@@ -1,0 +1,49 @@
+.ch-keyboard {
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+
+    width: auto;
+    height: auto;
+    border: 1px solid rgba(255,255,255, 0.4);
+    margin: 10px;
+
+    &__key {    
+        height: 55px;
+        margin: 3px;
+
+        &--incorrect {
+            background-color: rgba(201, 0, 36, 0.40) !important;
+        }
+
+        &--correct {
+            background-color: rgba(0, 201, 62, 0.40) !important;
+        }
+
+        &--alphanum {
+            background-color: rgba(255,255,255, 0.4);
+            width: 55px;
+        }
+
+        &--special {
+            background-color: rgba(255,255,255, 0.8);
+            color: $ch-background;
+            font-size: 18px;
+        }
+
+        &--incorrect,
+        &--correct,
+        &--alphanum,
+        &--special {
+            transition: background-color .3s ease-in-out;
+        }
+    }
+
+    &__row {
+        display: flex;
+    }
+
+    input {
+        padding: 0;
+    }
+}
